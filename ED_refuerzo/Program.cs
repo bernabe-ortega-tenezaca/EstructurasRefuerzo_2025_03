@@ -1,8 +1,31 @@
 ﻿Console.WriteLine("Universidad Estatal Amazónica"); //Console.Writeline sirve para escribir textos en pantalla
 System.Console.WriteLine("==============================");
 
-string estudiante = "Carlos Muñoz";
+// string estudiante = "Carlos Muñoz";
+// System.Console.WriteLine("Bienvenido " + estudiante + ", estas en tu casa " + estudiante);
+// System.Console.WriteLine("Bienvenido {0}, estas en tu casa {1}", estudiante, estudiante);
+// System.Console.WriteLine($"Bienvenido {estudiante}, estas en tu casa {estudiante}");
 
-System.Console.WriteLine("Bienvenido " + estudiante + ", estas en tu casa " + estudiante);
-System.Console.WriteLine("Bienvenido {0}, estas en tu casa {1}", estudiante, estudiante);
-System.Console.WriteLine($"Bienvenido {estudiante}, estas en tu casa {estudiante}");
+//Estructura clave valor (la clave debe ser única) key value
+
+List<string> listado = new List<string>();
+LinkedList<string> alumnos = new LinkedList<string>();
+Dictionary<string, string> ciudadanos = new Dictionary<string, string>();
+// Agregamos ciudadanos
+ciudadanos.Add("123456","Jorge");
+ciudadanos.Add("135790", "Anita");
+ciudadanos.Add("135792", "Juanita");
+
+// Buscar una clave(key) dentro del diccionario
+if (ciudadanos.ContainsKey("135792"))
+{
+    System.Console.WriteLine("Encontrado");
+} else{
+    System.Console.WriteLine("NO existe");
+}
+
+// Recorrer una collection
+foreach (var item in ciudadanos)
+{
+    System.Console.WriteLine(item);
+}
