@@ -1,33 +1,16 @@
 ﻿Console.WriteLine("Universidad Estatal Amazónica"); //Console.Writeline sirve para escribir textos en pantalla
-System.Console.WriteLine("==============================");
+System.Console.WriteLine("=============================="); //Llamar al método Writeline de la clase Console.
+//Diccionarios1.run();
 
-// string estudiante = "Carlos Muñoz";
-// System.Console.WriteLine("Bienvenido " + estudiante + ", estas en tu casa " + estudiante);
-// System.Console.WriteLine("Bienvenido {0}, estas en tu casa {1}", estudiante, estudiante);
-// System.Console.WriteLine($"Bienvenido {estudiante}, estas en tu casa {estudiante}");
+Dictionary<int, string> jugadores = new Dictionary<int, string>();
 
-//Estructura clave valor (la clave debe ser única) key value
+jugadores.Add(1, "Manchester");
+jugadores.Add(2, "Juventus");
+jugadores.Add(3, "Milan");
 
-List<string> listado = new List<string>();
-LinkedList<string> alumnos = new LinkedList<string>();
-
-Dictionary<string, string> ciudadanos = new Dictionary<string, string>();
-// Agregamos ciudadanos
-ciudadanos.Add("123456","Jorge");
-ciudadanos.Add("135790", "Anita");
-ciudadanos.Add("135792", "Juanita");
-
-string textoBuscar = "1234567";
-// Buscar una clave(key) dentro del diccionario
-if (ciudadanos.ContainsKey(textoBuscar))
+foreach (var item in jugadores)
 {
-    System.Console.WriteLine("Encontrado " + ciudadanos[textoBuscar]);
-} else{
-    System.Console.WriteLine("NO existe");
-}
-
-// Recorrer una collection
-foreach (var item in ciudadanos)
-{
-    System.Console.WriteLine(item);
+    System.Console.WriteLine(item.Key);
+    System.Console.WriteLine(item.Value);
+    System.Console.WriteLine(); //Salto de linea
 }
