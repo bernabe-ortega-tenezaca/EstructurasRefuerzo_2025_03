@@ -1,0 +1,5 @@
+public static class <Nombre de la clase>{
+    public static void run(){
+        
+    }
+}
