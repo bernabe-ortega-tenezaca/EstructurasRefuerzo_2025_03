@@ -10,16 +10,18 @@ System.Console.WriteLine("==============================");
 
 List<string> listado = new List<string>();
 LinkedList<string> alumnos = new LinkedList<string>();
+
 Dictionary<string, string> ciudadanos = new Dictionary<string, string>();
 // Agregamos ciudadanos
 ciudadanos.Add("123456","Jorge");
 ciudadanos.Add("135790", "Anita");
 ciudadanos.Add("135792", "Juanita");
 
+string textoBuscar = "1234567";
 // Buscar una clave(key) dentro del diccionario
-if (ciudadanos.ContainsKey("135792"))
+if (ciudadanos.ContainsKey(textoBuscar))
 {
-    System.Console.WriteLine("Encontrado");
+    System.Console.WriteLine("Encontrado " + ciudadanos[textoBuscar]);
 } else{
     System.Console.WriteLine("NO existe");
 }
