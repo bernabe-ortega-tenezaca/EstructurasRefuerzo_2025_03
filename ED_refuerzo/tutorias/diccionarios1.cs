@@ -1,5 +1,10 @@
 public static class Diccionarios1{
     public static void run(){
+        System.Console.WriteLine();
+        System.Console.WriteLine("---------------------------");
+        System.Console.WriteLine("Explicación de diccionarios");
+        System.Console.WriteLine("---------------------------");
+        System.Console.WriteLine();
         // string estudiante = "Carlos Muñoz";
         // System.Console.WriteLine("Bienvenido " + estudiante + ", estas en tu casa " + estudiante);
         // System.Console.WriteLine("Bienvenido {0}, estas en tu casa {1}", estudiante, estudiante);
