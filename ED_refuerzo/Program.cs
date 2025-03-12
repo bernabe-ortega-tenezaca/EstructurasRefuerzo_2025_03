@@ -3,4 +3,8 @@ Console.WriteLine("=============================="); //Llamar al método Writeli
 //Diccionarios1.run();
 //Diccionarios2.run();
 
+string a = "El viejo y el mar";
+string b = "El viejo y el mar";
+
+System.Console.WriteLine(string.CompareOrdinal(a, b));
 

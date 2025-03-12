@@ -3,7 +3,7 @@ public class Nodo{
     public Nodo izquierdo;
     public Nodo derecho;
 
-    public Nodo(string nombre){
+    public Nodo(string nombre){//Constructor
         nombre = nombre;
         izquierdo = null;
         derecho = null;
