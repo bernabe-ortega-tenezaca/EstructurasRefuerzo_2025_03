@@ -5,7 +5,7 @@ public class MiNodo{
 
     public MiNodo(string dato){
         Value = dato;
-        NodoIzquiero = null;
+        NodoIzquierdo = null;
         NodoDerecho = null;
     }
 }
