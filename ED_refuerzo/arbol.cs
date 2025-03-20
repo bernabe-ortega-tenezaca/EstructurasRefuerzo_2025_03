@@ -1,3 +1,5 @@
+using System.Reflection.Metadata;
+
 public class Arbol{
     public Nodo raiz;
 
@@ -23,7 +25,7 @@ public class Arbol{
 
     //TODO: eliminar
     //TODO: buscar
-    //TODO: recorrer
+
     public void PreOrder(Nodo nodo){
         if(nodo != null){
             System.Console.WriteLine(nodo.Valor + " ");
@@ -52,4 +54,42 @@ public class Arbol{
     //TODO: contar
     //TODO: getNivelMaximo
     //TODO: getNoHojas
+
+    //ident es una parametro opcional con valor por defecto  espacio
+    //last es un parametro opcional con valor por defecto true
+    public void PrintTree(Nodo nodo, string ident = " ", bool last = true){
+        if(nodo != null){
+            System.Console.WriteLine(ident);
+            if (last)
+            {
+                System.Console.WriteLine("└");
+                ident += " ";
+            }else{
+                System.Console.WriteLine("|-");
+                ident += "|";
+            }
+            System.Console.WriteLine(nodo.Valor);
+            PrintTree(nodo.izquierdo, ident, false);
+            PrintTree(nodo.derecho, ident, true);
+        }
+    }
+
+    public void PrintSearchPath(Nodo nodo, string value){
+        Nodo current = raiz;
+
+        while(current != null){
+            System.Console.WriteLine(current.Valor + "->");
+            if(string.Compare(value, nodo.Valor)<0){
+                current = current.izquierdo;
+            }else if(string.Compare(value,nodo.Valor)>0){
+                current = current.derecho;
+            }else{
+                break;
+            }
+        }
+
+        if(current == null) System.Console.WriteLine("No encontrado");
+        else System.Console.WriteLine("Encontrado: " + current.Valor);
+    }
+
 }
