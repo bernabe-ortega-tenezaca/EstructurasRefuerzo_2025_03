@@ -1,7 +1,6 @@
 public class Arbol{
     public Nodo raiz;
 
-    //TODO: insertar
     public void Insertar(string value){
         raiz = InsertarRecursivo(raiz, value);
     }
@@ -25,6 +24,31 @@ public class Arbol{
     //TODO: eliminar
     //TODO: buscar
     //TODO: recorrer
+    public void PreOrder(Nodo nodo){
+        if(nodo != null){
+            System.Console.WriteLine(nodo.Valor + " ");
+            PreOrder(nodo.izquierdo);
+            PreOrder(nodo.derecho);
+        }
+    }
+
+    public void InOrder(Nodo nodo){
+        if(nodo != null){
+            InOrder(nodo.izquierdo);
+            System.Console.WriteLine(nodo.Valor + " ");
+            InOrder(nodo.derecho);
+        }
+    }
+
+    public void PosOrder(Nodo nodo){
+        if(nodo != null){
+            PosOrder(nodo.izquierdo);
+            PosOrder(nodo.derecho);
+            System.Console.WriteLine(nodo.Valor + " ");
+        }
+    }
+
+
     //TODO: contar
     //TODO: getNivelMaximo
     //TODO: getNoHojas
