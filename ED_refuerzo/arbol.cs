@@ -26,7 +26,10 @@ public class Arbol{
     //TODO: eliminar
     //TODO: buscar
 
-    public void PreOrder(Nodo nodo){
+    public void ImprimirPreorder(){
+        PreOrder(raiz);
+    }
+    private void PreOrder(Nodo nodo){
         if(nodo != null){
             System.Console.WriteLine(nodo.Valor + " ");
             PreOrder(nodo.izquierdo);
@@ -59,13 +62,13 @@ public class Arbol{
     //last es un parametro opcional con valor por defecto true
     public void PrintTree(Nodo nodo, string ident = " ", bool last = true){
         if(nodo != null){
-            System.Console.WriteLine(ident);
+            System.Console.Write(ident);
             if (last)
             {
-                System.Console.WriteLine("└");
+                System.Console.Write("└");
                 ident += " ";
             }else{
-                System.Console.WriteLine("|-");
+                System.Console.Write("|-");
                 ident += "|";
             }
             System.Console.WriteLine(nodo.Valor);

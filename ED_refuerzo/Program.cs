@@ -1,7 +1,24 @@
 ﻿Console.WriteLine("Universidad Estatal Amazónica"); //Console.Writeline sirve para escribir textos en pantalla
 Console.WriteLine("=============================="); //Llamar al método Writeline de la clase Console.
 
+Arbol Equipos = new Arbol();
 
+Equipos.Insertar("5");
+Equipos.Insertar("3");
+Equipos.Insertar("7");
+Equipos.Insertar("2");
+Equipos.Insertar("4");
+Equipos.Insertar("9");
+
+Equipos.PosOrder(Equipos.raiz);
+System.Console.WriteLine();
+Equipos.InOrder(Equipos.raiz);
+System.Console.WriteLine();
+Equipos.ImprimirPreorder(); //linea mejorada
+System.Console.WriteLine();
+Equipos.PrintTree(Equipos.raiz);
+System.Console.WriteLine();
+Equipos.PrintSearchPath(Equipos.raiz, "9");
 
 
 
