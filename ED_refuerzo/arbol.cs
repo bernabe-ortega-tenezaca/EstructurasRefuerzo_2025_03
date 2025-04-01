@@ -1,4 +1,4 @@
-using System.Reflection.Metadata;
+
 
 public class Arbol{
     public Nodo raiz;
