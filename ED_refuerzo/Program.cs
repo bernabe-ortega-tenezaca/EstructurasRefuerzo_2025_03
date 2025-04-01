@@ -1,88 +1,23 @@
 ﻿Console.WriteLine("Universidad Estatal Amazónica"); //Console.Writeline sirve para escribir textos en pantalla
 Console.WriteLine("=============================="); //Llamar al método Writeline de la clase Console.
 
-Arbol Equipos = new Arbol();
+GrafoLista g = new GrafoLista(6); //diapositiva 7
+g.AddAristaGL(0,1);
+g.AddAristaGL(0,2);
 
-Equipos.Insertar("5");
-Equipos.Insertar("3");
-Equipos.Insertar("7");
-Equipos.Insertar("2");
-Equipos.Insertar("4");
-Equipos.Insertar("9");
+GrafoMatriz h = new GrafoMatriz(4);
+h.AddEdge(0,1);
+h.AddEdge(0,2);
 
-Equipos.PosOrder(Equipos.raiz);
-System.Console.WriteLine();
-Equipos.InOrder(Equipos.raiz);
-System.Console.WriteLine();
-Equipos.ImprimirPreorder(); //linea mejorada
-System.Console.WriteLine();
-Equipos.PrintTree(Equipos.raiz);
-System.Console.WriteLine();
-Equipos.PrintSearchPath(Equipos.raiz, "9");
+// for (int i = 0; i < g.getCantidadVertices(); i++)
+// {
+//     System.Console.WriteLine(g);
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//Diccionarios1.run();
-//Diccionarios2.run();
-
-// string a = "El viejo y el mar";
-// string b = "El viejo y el mar";
-
-// int valor = a.CompareTo(b);
-
-// if(a.CompareTo(b)==0){
-//     System.Console.WriteLine("es igual");
-// }else{
-//     System.Console.WriteLine("no es igual");
 // }
 
-// ArbolbinarioBusqueda misEstudiantes = new ArbolbinarioBusqueda();
-// // juan, ana, antonio, juanita, pepe, lucia
-// misEstudiantes.insertarEstudiante("Juan"); // Juan se convierte en la raíz
-// misEstudiantes.insertarEstudiante("Anita");
-// misEstudiantes.insertarEstudiante("Antonio");
+System.Console.WriteLine();
 
-// bool encontrado = misEstudiantes.Buscar("juan");
-
-// if(encontrado){
-//     System.Console.WriteLine("encontrado");
-// }else{
-//     System.Console.WriteLine("No existe este registro");
+// foreach (var item in h)
+// {
+    
 // }
-
-
-
