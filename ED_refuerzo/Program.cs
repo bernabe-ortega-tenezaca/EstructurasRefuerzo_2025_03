@@ -8,6 +8,10 @@ g.AddAristaGL(0,2);
 GrafoMatriz h = new GrafoMatriz(4);
 h.AddEdge(0,1);
 h.AddEdge(0,2);
+h.AddEdge(1,2);
+h.AddEdge(2,3);
+h.AddEdge(3,1);
+h.PrintGrafo();
 
 
 GrafoPonderado p = new GrafoPonderado(4);
