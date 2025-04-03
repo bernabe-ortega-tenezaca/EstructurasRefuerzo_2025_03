@@ -13,10 +13,6 @@ public class GrafoLista{
         }
     }
 
-    public int getCantidadVertices(){
-        return V;
-    }
-
     public void AddAristaGL(int v, int w){
         adj[v].Add(w);
     }
@@ -40,6 +36,18 @@ public class GrafoLista{
                 }
             }
         }    
+    }
+
+    public void PrintGraph(){
+        for (int i = 0; i < V; i++)
+        {
+            System.Console.Write($"Vertice {i}: ");
+            foreach (var item in adj[i])
+            {
+                System.Console.Write($" -> {item}");
+            }
+            System.Console.WriteLine();
+        }
     }
 
 }
