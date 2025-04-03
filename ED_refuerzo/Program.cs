@@ -9,15 +9,7 @@ GrafoMatriz h = new GrafoMatriz(4);
 h.AddEdge(0,1);
 h.AddEdge(0,2);
 
-// for (int i = 0; i < g.getCantidadVertices(); i++)
-// {
-//     System.Console.WriteLine(g);
 
-// }
-
-System.Console.WriteLine();
-
-// foreach (var item in h)
-// {
-    
-// }
+GrafoPonderado p = new GrafoPonderado(4);
+p.AddEdge(0,1,20);
+p.AddEdge(0,2,50);
