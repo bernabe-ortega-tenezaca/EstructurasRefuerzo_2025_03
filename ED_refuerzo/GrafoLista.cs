@@ -50,4 +50,26 @@ public class GrafoLista{
         }
     }
 
+    public string PrintGraph(bool imprimir=true){
+        string msg = "No se puede imprimir el grafo";
+        try
+        {
+            for (int i = 0; i < V; i++)
+            {
+                System.Console.Write($"Vertice {i}: ");
+                foreach (var item in adj[i])
+                {
+                    System.Console.Write($" -> {item}");
+                }
+                System.Console.WriteLine();
+            }
+            msg = "\n"; 
+        }
+        catch (System.Exception e)
+        {
+            System.Console.WriteLine(e);
+        }
+        return msg;
+    }
+
 }

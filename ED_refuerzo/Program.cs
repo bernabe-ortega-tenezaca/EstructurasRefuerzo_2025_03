@@ -6,8 +6,10 @@ g.AddAristaGL(0,1);
 g.AddAristaGL(0,2);
 g.AddAristaGL(3,2);
 g.AddAristaGL(2,4);
-g.PrintGraph();
-System.Console.WriteLine("==============================");
+// g.PrintGraph();
+// System.Console.WriteLine("==============================");\
+System.Console.WriteLine(g.PrintGraph(imprimir: true));
+
 
 GrafoMatriz h = new GrafoMatriz(4);
 h.AddEdge(0,1);

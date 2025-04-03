@@ -16,9 +16,9 @@ public class GrafoMatriz{
     public void PrintGrafo(){
         int vertices = adjMatrix.GetLength(0);
 
-        for (int i = 0; i < vertices; i++)
+        for (int i = 0; i < vertices; i++) //fila
         {
-            for (int j = 0; j < vertices; j++)
+            for (int j = 0; j < vertices; j++) //columna
             {
                 System.Console.Write($"{adjMatrix[i,j]} ");
             }
