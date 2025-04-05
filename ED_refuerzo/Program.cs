@@ -20,6 +20,24 @@ h.AddEdge(3,1);
 h.PrintGrafo();
 
 
-GrafoPonderado p = new GrafoPonderado(4);
-p.AddEdge(0,1,20);
-p.AddEdge(0,2,50);
+GrafoPonderado grafo = new GrafoPonderado(5);
+        grafo.AddEdge(0, 1, 10);
+        grafo.AddEdge(0, 4, 5);
+        grafo.AddEdge(1, 2, 1);
+        grafo.AddEdge(1, 4, 2);
+        grafo.AddEdge(2, 3, 4);
+        grafo.AddEdge(3, 2, 6);
+        grafo.AddEdge(4, 1, 3);
+        grafo.AddEdge(4, 2, 9);
+        grafo.AddEdge(4, 3, 2);
+
+        Console.WriteLine("Grafo de ciudades:");
+        grafo.PrintGraph();
+
+        var caminoCorto = grafo.Dijkstra(0);
+
+        
+        foreach (var path in caminoCorto)
+        {
+            Console.WriteLine($"Ciudad {path.Key}: {path.Value}");
+        }
